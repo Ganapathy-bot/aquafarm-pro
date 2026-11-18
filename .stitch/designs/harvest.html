@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>AquaFarm Pro - Healthy Fish. Profitable Harvest.</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Manrope:wght@100..900&display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "on-secondary": "#ffffff",
+            "surface-container": "#e2efff",
+            "on-primary-container": "#f4fffb",
+            "primary-fixed": "#8ff4e3",
+            "on-primary-fixed-variant": "#005047",
+            "on-tertiary-fixed-variant": "#7b2e17",
+            "secondary-container": "#a1f6ab",
+            "surface-variant": "#cce5ff",
+            "surface-container-highest": "#cce5ff",
+            "on-tertiary-container": "#fffbff",
+            "inverse-primary": "#72d8c8",
+            "tertiary": "#96432a",
+            "tertiary-fixed": "#ffdbd1",
+            "on-surface": "#001e31",
+            "background": "#f7f9ff",
+            "inverse-on-surface": "#e7f2ff",
+            "outline": "#6d7a77",
+            "inverse-surface": "#003351",
+            "surface-dim": "#bbdeff",
+            "on-primary-fixed": "#00201c",
+            "surface-bright": "#f7f9ff",
+            "surface-container-lowest": "#ffffff",
+            "on-secondary-fixed-variant": "#005321",
+            "surface-tint": "#006b5f",
+            "primary": "#00685d",
+            "error-container": "#ffdad6",
+            "primary-container": "#008376",
+            "tertiary-fixed-dim": "#ffb5a0",
+            "on-secondary-container": "#1f7337",
+            "on-background": "#001e31",
+            "on-tertiary-fixed": "#3b0900",
+            "secondary-fixed": "#a1f6ab",
+            "on-surface-variant": "#3d4946",
+            "surface-container-high": "#d7eaff",
+            "surface-container-low": "#ecf4ff",
+            "on-secondary-fixed": "#002109",
+            "tertiary-container": "#b55a40",
+            "on-error-container": "#93000a",
+            "secondary": "#166d32",
+            "outline-variant": "#bdc9c5",
+            "surface": "#f7f9ff",
+            "on-primary": "#ffffff",
+            "on-tertiary": "#ffffff",
+            "error": "#ba1a1a",
+            "secondary-fixed-dim": "#86d991",
+            "on-error": "#ffffff",
+            "primary-fixed-dim": "#72d8c8"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+          "spacing": {
+            "space-sm": "0.5rem",
+            "space-lg": "1rem",
+            "space-xl": "1.5rem",
+            "space-xs": "0.25rem",
+            "space-md": "0.75rem",
+            "gutter": "0.75rem",
+            "margin": "1rem"
+          },
+          "fontFamily": {
+            "headline-sm": ["Manrope"],
+            "stat-display": ["Manrope"],
+            "body-sm": ["Manrope"],
+            "label-sm": ["Inter"],
+            "body-lg": ["Manrope"],
+            "body-md": ["Manrope"],
+            "label-lg": ["Inter"],
+            "label-md": ["Inter"],
+            "headline-md": ["Manrope"],
+            "headline-lg": ["Manrope"],
+            "headline-lg-mobile": ["Manrope"]
+          },
+          "fontSize": {
+            "headline-sm": ["16px", {"lineHeight": "22px", "letterSpacing": "0em", "fontWeight": "600"}],
+            "stat-display": ["22px", {"lineHeight": "26px", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+            "body-sm": ["11px", {"lineHeight": "16px", "letterSpacing": "0.01em", "fontWeight": "400"}],
+            "label-sm": ["10px", {"lineHeight": "12px", "letterSpacing": "0.04em", "fontWeight": "600"}],
+            "body-lg": ["15px", {"lineHeight": "22px", "letterSpacing": "0em", "fontWeight": "400"}],
+            "body-md": ["13px", {"lineHeight": "18px", "letterSpacing": "0.01em", "fontWeight": "400"}],
+            "label-lg": ["13px", {"lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "600"}],
+            "label-md": ["11px", {"lineHeight": "14px", "letterSpacing": "0.03em", "fontWeight": "500"}],
+            "headline-md": ["20px", {"lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+            "headline-lg": ["30px", {"lineHeight": "38px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+            "headline-lg-mobile": ["24px", {"lineHeight": "32px", "letterSpacing": "-0.02em", "fontWeight": "700"}]
+          }
+        },
+      },
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 500, 'GRAD' 0, 'opsz' 24;
+      display: inline-block;
+      vertical-align: middle;
+      line-height: 1;
+    }
+    .material-symbols-outlined.fill {
+      font-variation-settings: 'FILL' 1;
+    }
+    body {
+      background-color: #E7F3F8;
+      color: #001e31;
+      font-family: 'Manrope', sans-serif;
+      -webkit-tap-highlight-color: transparent;
+    }
+  </style>
+</head>
+<body class="bg-surface-container-low min-h-screen flex justify-center selection:bg-primary/20">
+<!-- Mobile Screen Shell Container (390px portrait optimized frame) -->
+<div class="w-full max-w-[390px] min-h-screen bg-surface-container-low flex flex-col relative pb-28">
+<!-- Android System Status Bar Simulation (24px height) -->
+<div class="h-6 w-full flex items-center justify-between px-5 pt-1 text-on-surface-variant z-40 select-none">
+<div class="flex items-center space-x-1.5">
+<span class="material-symbols-outlined text-[15px]" data-icon="signal_cellular_4_bar">signal_cellular_4_bar</span>
+<span class="material-symbols-outlined text-[15px]" data-icon="wifi">wifi</span>
+<span class="material-symbols-outlined text-[15px] fill" data-icon="battery_full">battery_full</span>
+</div>
+</div>
+<!-- Top App Bar (Shared Components standard: AquaFarm Pro docked full-width) -->
+<header class="bg-surface text-primary flex flex-col w-full px-margin pt-2 pb-space-sm border-b border-outline-variant/30 sticky top-0 z-30">
+<div class="flex items-center justify-between w-full">
+<!-- Brand Cluster with Logo https://lh3.googleusercontent.com/aida/ALJJyrAYUZ6n9ny1OXx2XZyaHVDl8FL1MAnIxI4wUBpBknfhM6KkcPRvYJttFWMpuwdvh5kS-vABlQBPOqZsLY_dOlpuweQhhoh0qmxZ9lMJvptssKwT-PyR1uY5jB95sgAKV108ftm4SznGN9ZXu5iW8sjX2-PdRgazVTNacthQfzbqmzen4eEWGp3yORiTe33mhq_DH0LhFByc2nwnzkvQSHZvh7I1O2vW8c9lvOrf8LnclH6CfqWabrQ4Coc -->
+<div class="flex items-center space-x-2.5">
+<img alt="AquaFarm Pro Logo" class="w-8 h-8 rounded-lg object-contain shadow-xs border border-outline-variant/30 bg-surface-container-lowest" src="https://lh3.googleusercontent.com/aida/ALJJyrAYUZ6n9ny1OXx2XZyaHVDl8FL1MAnIxI4wUBpBknfhM6KkcPRvYJttFWMpuwdvh5kS-vABlQBPOqZsLY_dOlpuweQhhoh0qmxZ9lMJvptssKwT-PyR1uY5jB95sgAKV108ftm4SznGN9ZXu5iW8sjX2-PdRgazVTNacthQfzbqmzen4eEWGp3yORiTe33mhq_DH0LhFByc2nwnzkvQSHZvh7I1O2vW8c9lvOrf8LnclH6CfqWabrQ4Coc"/>
+<div class="flex flex-col">
+<span class="text-headline-md font-headline-md font-bold text-on-surface leading-tight tracking-tight">AquaFarm Pro</span>
+<span class="text-body-sm font-body-sm text-on-surface-variant italic">Freshwater Pisciculture Systems</span>
+</div>
+</div>
+<!-- Trailing Action Pill & Notifications -->
+<div class="flex items-center space-x-2">
+<!-- Notification Button -->
+<button class="relative w-8 h-8 rounded-full flex items-center justify-center bg-surface-container-lowest text-on-surface-variant hover:bg-surface-container transition-colors duration-150 active:scale-95 border border-outline-variant/30">
+<span class="material-symbols-outlined text-[20px]" data-icon="notifications">notifications</span>
+<span class="absolute top-1.5 right-1.5 w-2 h-2 rounded-full bg-secondary ring-2 ring-surface-container-lowest"></span>
+</button>
+</div>
+</div>
+</header>
+<!-- Main Content Canvas -->
+<main class="flex-1 px-margin pt-space-md space-y-space-md">
+<!-- 1. Screen Header Section -->
+<section class="space-y-1.5">
+<div class="inline-flex items-center space-x-1.5 bg-surface-container-lowest border border-primary/20 rounded-full px-2.5 py-1 shadow-xs">
+<span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+<span class="font-label-sm text-label-sm font-bold text-primary tracking-wide">Active Poly-culture Protocol • Cycle Day 148</span>
+</div>
+<h1 class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface font-extrabold tracking-tight">
+          Healthy Fish. Profitable Harvest.
+        </h1>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+          Scientific health diagnostics, growth monitoring, and verifiable farm economics.
+        </p>
+</section>
+<!-- 2. Fish Health Monitoring Section -->
+<section class="space-y-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center space-x-2">
+<div class="w-7 h-7 rounded-lg bg-primary-fixed/40 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[18px]" data-icon="favorite">favorite</span>
+</div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-bold">Fish Health Monitoring</h2>
+</div>
+<span class="text-label-sm font-label-sm text-primary font-semibold bg-surface-container-lowest border border-outline-variant/40 px-2 py-0.5 rounded-md">Watch the pond</span>
+</div>
+<!-- 2a. Critical Warning Signs Card (Warning Tone) -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md border border-tertiary-container/30 shadow-xs relative overflow-hidden">
+<div class="absolute top-0 left-0 right-0 h-1 bg-tertiary-container"></div>
+<div class="flex items-center justify-between mb-space-sm pt-1">
+<div class="flex items-center space-x-1.5 text-tertiary">
+<span class="material-symbols-outlined text-[20px] fill" data-icon="warning">warning</span>
+<span class="font-headline-sm text-[14px] font-bold">Critical Warning Signs</span>
+</div>
+<span class="font-label-sm text-label-sm px-2 py-0.5 bg-tertiary-fixed text-on-tertiary-fixed-variant rounded font-bold">Immediate Action</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-2">
+            Inspect pond early morning and during feed dispensing for the following distress markers:
+          </p>
+<div class="grid grid-cols-1 gap-1.5">
+<div class="flex items-start space-x-2 bg-surface-container-low/60 p-2 rounded-lg border border-outline-variant/20">
+<span class="material-symbols-outlined text-tertiary text-[17px] mt-0.5" data-icon="report_problem">report_problem</span>
+<div class="text-body-sm font-body-sm text-on-surface font-medium leading-tight">
+<span class="font-semibold text-on-surface">Reduced feeding activity</span>
+              </div>
+</div>
+<div class="flex items-start space-x-2 bg-surface-container-low/60 p-2 rounded-lg border border-outline-variant/20">
+<span class="material-symbols-outlined text-tertiary text-[17px] mt-0.5" data-icon="air">air</span>
+<div class="text-body-sm font-body-sm text-on-surface font-medium leading-tight">
+<span class="font-semibold text-on-surface">Gasping at the water surface</span>
+              </div>
+</div>
+<div class="flex items-start space-x-2 bg-surface-container-low/60 p-2 rounded-lg border border-outline-variant/20">
+<span class="material-symbols-outlined text-tertiary text-[17px] mt-0.5" data-icon="motion_photos_off">motion_photos_off</span>
+<div class="text-body-sm font-body-sm text-on-surface font-medium leading-tight">
+<span class="font-semibold text-on-surface">Unusual swimming & lethargy</span> (spiral motion, rubbing pond dykes)
+              </div>
+</div>
+<div class="flex items-start space-x-2 bg-surface-container-low/60 p-2 rounded-lg border border-outline-variant/20">
+<span class="material-symbols-outlined text-tertiary text-[17px] mt-0.5" data-icon="coronavirus">coronavirus</span>
+<div class="text-body-sm font-body-sm text-on-surface font-medium leading-tight">
+<span class="font-semibold text-on-surface">Injuries, lesions, mucus, or parasites.</span> Also watch for abnormal mortality.
+              </div>
+</div>
+</div>
+</div>
+<!-- 2b. Scientific Prevention Protocol (Shield/Check Card) -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md border border-outline-variant/40 shadow-xs">
+<div class="flex items-center space-x-2 mb-space-sm text-primary">
+<span class="material-symbols-outlined text-[20px] fill" data-icon="verified_user">verified_user</span>
+<span class="font-headline-sm text-[14px] font-bold text-on-surface">Scientific Prevention Protocol (6 Pillars)</span>
+</div>
+<div class="grid grid-cols-2 gap-2">
+<div class="p-2 rounded-lg bg-surface-container-low/40 border border-outline-variant/30 flex flex-col justify-between">
+<div class="flex items-center space-x-1.5 text-primary mb-1">
+<span class="material-symbols-outlined text-[16px]" data-icon="verified">verified</span>
+<span class="font-label-sm text-label-sm font-bold text-on-surface">1. Certified Seed</span>
+</div>
+<p class="text-body-sm font-body-sm text-on-surface-variant leading-tight">Purchase healthy fish seed.</p>
+</div>
+<div class="p-2 rounded-lg bg-surface-container-low/40 border border-outline-variant/30 flex flex-col justify-between">
+<div class="flex items-center space-x-1.5 text-primary mb-1">
+<span class="material-symbols-outlined text-[16px]" data-icon="groups">groups</span>
+<span class="font-label-sm text-label-sm font-bold text-on-surface">2. Density Control</span>
+</div>
+<p class="text-body-sm font-body-sm text-on-surface-variant leading-tight">Maintain a suitable stocking density.</p>
+</div>
+<div class="p-2 rounded-lg bg-surface-container-low/40 border border-outline-variant/30 flex flex-col justify-between">
+<div class="flex items-center space-x-1.5 text-primary mb-1">
+<span class="material-symbols-outlined text-[16px]" data-icon="water_drop">water_drop</span>
+<span class="font-label-sm text-label-sm font-bold text-on-surface">3. Water Telemetry</span>
+</div>
+<p class="text-body-sm font-body-sm text-on-surface-variant leading-tight">Monitor dissolved oxygen and water quality.</p>
+</div>
+<div class="p-2 rounded-lg bg-surface-container-low/40 border border-outline-variant/30 flex flex-col justify-between">
+<div class="flex items-center space-x-1.5 text-primary mb-1">
+<span class="material-symbols-outlined text-[16px]" data-icon="delete_sweep">delete_sweep</span>
+<span class="font-label-sm text-label-sm font-bold text-on-surface">4. Prompt Removal</span>
+</div>
+<p class="text-body-sm font-body-sm text-on-surface-variant leading-tight">Immediate quarantine and disposal of morbid carcasses.</p>
+</div>
+<div class="p-2 rounded-lg bg-surface-container-low/40 border border-outline-variant/30 flex flex-col justify-between">
+<div class="flex items-center space-x-1.5 text-primary mb-1">
+<span class="material-symbols-outlined text-[16px]" data-icon="biotech">biotech</span>
+<span class="font-label-sm text-label-sm font-bold text-on-surface">5. Diagnosis First</span>
+</div>
+<p class="text-body-sm font-body-sm text-on-surface-variant leading-tight">Diagnose the problem before applying any treatment.</p>
+</div>
+<div class="p-2 rounded-lg bg-surface-container-low/40 border border-outline-variant/30 flex flex-col justify-between">
+<div class="flex items-center space-x-1.5 text-primary mb-1">
+<span class="material-symbols-outlined text-[16px]" data-icon="menu_book">menu_book</span>
+<span class="font-label-sm text-label-sm font-bold text-on-surface">6. Farm Logbook</span>
+</div>
+<p class="text-body-sm font-body-sm text-on-surface-variant leading-tight">Keep regular growth and mortality records.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- 3. Growth Monitoring Card (Field Template / Data Entry Baseline) -->
+<section class="bg-surface-container-lowest rounded-xl p-space-md border border-outline-variant/40 shadow-xs space-y-space-md">
+<div class="flex items-center justify-between border-b border-outline-variant/20 pb-2">
+<div class="flex items-center space-x-2">
+<span class="material-symbols-outlined text-primary text-[20px]" data-icon="query_stats">query_stats</span>
+<div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-bold">Monthly Growth Sampling</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Field Template & Baseline Metrics</p>
+</div>
+</div>
+<span class="font-label-sm text-label-sm bg-surface-container-high text-on-surface font-bold px-2 py-0.5 rounded-full border border-outline-variant/40">Field Baseline (Unfilled)</span>
+</div>
+<!-- Unfilled Measurement Inputs -->
+<div class="grid grid-cols-2 gap-2.5">
+<div class="p-2.5 rounded-lg bg-surface-container-low/50 border border-outline-variant/40">
+<span class="font-label-sm text-label-sm text-on-surface-variant block uppercase tracking-wide mb-1">Date of Sampling</span>
+<div class="font-headline-sm text-[15px] font-bold text-outline">DD / MM / YYYY</div>
+</div>
+<div class="p-2.5 rounded-lg bg-surface-container-low/50 border border-outline-variant/40">
+<span class="font-label-sm text-label-sm text-on-surface-variant block uppercase tracking-wide mb-1">Average Weight</span>
+<div class="font-headline-sm text-[15px] font-bold text-outline">-- <span class="font-normal text-label-md text-on-surface-variant">g</span></div>
+</div>
+<div class="p-2.5 rounded-lg bg-surface-container-low/50 border border-outline-variant/40">
+<span class="font-label-sm text-label-sm text-on-surface-variant block uppercase tracking-wide mb-1">Average Length</span>
+<div class="font-headline-sm text-[15px] font-bold text-outline">-- <span class="font-normal text-label-md text-on-surface-variant">cm</span></div>
+</div>
+<div class="p-2.5 rounded-lg bg-surface-container-low/50 border border-outline-variant/40">
+<span class="font-label-sm text-label-sm text-on-surface-variant block uppercase tracking-wide mb-1">Est. Pond Biomass</span>
+<div class="font-headline-sm text-[15px] font-bold text-outline">-- <span class="font-normal text-label-md text-on-surface-variant">kg</span></div>
+</div>
+<div class="p-2.5 rounded-lg bg-surface-container-low/50 border border-outline-variant/40">
+<span class="font-label-sm text-label-sm text-on-surface-variant block uppercase tracking-wide mb-1">Survival Rate</span>
+<div class="font-headline-sm text-[15px] font-bold text-outline">-- <span class="font-normal text-label-md text-on-surface-variant">%</span></div>
+</div>
+<div class="p-2.5 rounded-lg bg-surface-container-low/50 border border-outline-variant/40">
+<span class="font-label-sm text-label-sm text-on-surface-variant block uppercase tracking-wide mb-1">Daily Feed Quantity</span>
+<div class="font-headline-sm text-[15px] font-bold text-outline">-- <span class="font-normal text-label-md text-on-surface-variant">kg/day</span></div>
+</div>
+</div>
+<!-- Growth Progression Chart Placeholder -->
+<div class="p-3 rounded-lg bg-surface-container-low/30 border border-dashed border-outline-variant/70 space-y-2">
+<div class="flex items-center justify-between text-label-sm font-label-sm text-on-surface-variant font-semibold">
+<span class="flex items-center space-x-1">
+<span class="material-symbols-outlined text-[14px]" data-icon="show_chart">show_chart</span>
+<span>Weight Gain Over Time (g vs. Days)</span>
+</span>
+<span class="text-primary font-bold">Placeholder</span>
+</div>
+<!-- SVG Chart Curve Visual -->
+<div class="h-28 w-full relative flex flex-col justify-end pt-2 pb-1">
+<svg class="w-full h-20 overflow-visible" fill="none" viewbox="0 0 320 80" xmlns="http://www.w3.org/2000/svg">
+<!-- Grid lines -->
+<line stroke="#D0E5EE" stroke-dasharray="3 3" stroke-width="0.8" x1="0" x2="320" y1="20" y2="20"></line>
+<line stroke="#D0E5EE" stroke-dasharray="3 3" stroke-width="0.8" x1="0" x2="320" y1="50" y2="50"></line>
+<!-- Ideal Target Reference Curve -->
+<path d="M10 70 C70 65, 120 50, 180 32 C230 18, 280 8, 310 5" opacity="0.6" stroke="#008376" stroke-dasharray="4 3" stroke-linecap="round" stroke-width="2"></path>
+<!-- Data Points (Projected nodes) -->
+<circle cx="10" cy="70" fill="#008376" r="3"></circle>
+<circle cx="85" cy="58" fill="#008376" r="3"></circle>
+<circle cx="160" cy="42" fill="#008376" r="3"></circle>
+<circle cx="235" cy="24" fill="#008376" r="3"></circle>
+<circle cx="310" cy="5" fill="#00685d" r="3.5"></circle>
+</svg>
+<!-- Axis Labels -->
+<div class="flex justify-between text-[10px] font-label-sm text-outline-variant font-medium pt-1 px-1">
+<span>Earlier</span>
+<span></span>
+<span>Sampling dates</span>
+<span></span>
+<span>Later</span>
+</div>
+</div>
+<div class="flex items-center justify-center space-x-1.5 text-center text-body-sm font-body-sm text-outline pt-1">
+<span class="material-symbols-outlined text-[14px]" data-icon="hourglass_empty">hourglass_empty</span>
+<span>No measurements entered. This chart is a placeholder.</span>
+</div>
+</div>
+</section>
+<!-- 4. Harvesting and Marketing Section -->
+<section class="space-y-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center space-x-2">
+<div class="w-7 h-7 rounded-lg bg-primary-fixed/40 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[18px]" data-icon="phishing">phishing</span>
+</div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-bold">Harvesting & Marketing</h2>
+</div>
+<span class="font-label-sm text-label-sm text-secondary font-bold bg-secondary-container/30 px-2 py-0.5 rounded-full border border-secondary-container">Standard SOP</span>
+</div>
+<!-- Embedded Karp Harvest Image Container with Badge -->
+<div class="relative rounded-2xl overflow-hidden border border-outline-variant/40 shadow-xs group">
+<img alt="Freshwater carp drag-net harvest with local pisciculture team" class="w-full h-44 object-cover object-center" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAZlp73Q58Q7esFWoIuUtTJEo-ocKCT6rGtxS82CO07xmRJjqzagfJ_G1fLLRsRxYd0_xxHN2T6GC3THtzB-GbI2_MoKEKOmoCgNnLPXEXKEhHLfe2bxVkiXg1Gf-DwvGqKNTK_-6OyZcnvqV_u9bWghZXPtL__LAUajAPHPUycuoEBkVvY4wT9rnFWXlgFXoW66mI46TrMBjtxF1Q1pkI8ai4Q4gshStw7X1nyzOaKxbuD1t-nbsZztkDpoetPz3qHggr10dRj_s0Y"/>
+<div class="absolute inset-0 bg-gradient-to-t from-on-surface/80 via-transparent to-black/20"></div>
+<div class="absolute top-2.5 left-2.5">
+<span class="bg-surface-container-lowest/90 backdrop-blur-sm text-on-surface text-label-sm font-label-sm font-bold px-2.5 py-1 rounded-full border border-outline-variant/30 shadow-xs flex items-center space-x-1">
+<span class="material-symbols-outlined text-[13px] text-primary" data-icon="hub">hub</span>
+<span>Drag-Netting Harvest</span>
+</span>
+</div>
+<div class="absolute bottom-2.5 left-3 right-3 text-white">
+<p class="font-headline-sm text-[14px] text-white font-bold leading-tight drop-shadow-sm">
+              Commercial Carp Pond Seine Operation
+            </p>
+<p class="text-body-sm font-body-sm text-surface-container-lowest/80 text-[11px]">
+              Active hauling of Rohu, Catla & Mrigal in morning cool hours
+            </p>
+</div>
+</div>
+<!-- Standard Harvest Protocols List (1-6) -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md border border-outline-variant/40 shadow-xs space-y-2">
+<h3 class="font-headline-sm text-[14px] font-bold text-on-surface flex items-center space-x-1.5">
+<span class="material-symbols-outlined text-[18px] text-primary" data-icon="checklist">checklist</span>
+<span>Standard Harvest Protocols</span>
+</h3>
+<div class="space-y-1.5 text-body-sm font-body-sm text-on-surface">
+<div class="flex items-start space-x-2">
+<span class="w-5 h-5 rounded-full bg-surface-container text-primary font-bold text-[11px] flex items-center justify-center shrink-0 mt-0.5">1</span>
+<p><strong class="font-semibold text-on-surface">Check size and market demand</strong> before deciding what to harvest.</p>
+</div>
+<div class="flex items-start space-x-2">
+<span class="w-5 h-5 rounded-full bg-surface-container text-primary font-bold text-[11px] flex items-center justify-center shrink-0 mt-0.5">2</span>
+<p><strong class="font-semibold text-on-surface">Use suitable nets</strong> to harvest the marketable fish.</p>
+</div>
+<div class="flex items-start space-x-2">
+<span class="w-5 h-5 rounded-full bg-surface-container text-primary font-bold text-[11px] flex items-center justify-center shrink-0 mt-0.5">3</span>
+<p><strong class="font-semibold text-on-surface">Immediate grading:</strong> Segregate stock by size and species swiftly in sorting pens.</p>
+</div>
+<div class="flex items-start space-x-2">
+<span class="w-5 h-5 rounded-full bg-surface-container text-primary font-bold text-[11px] flex items-center justify-center shrink-0 mt-0.5">4</span>
+<p><strong class="font-semibold text-on-surface">Careful handling:</strong> Avoid dry ground contact to prevent scale descaling and subcutaneous bruising.</p>
+</div>
+<div class="flex items-start space-x-2">
+<span class="w-5 h-5 rounded-full bg-surface-container text-primary font-bold text-[11px] flex items-center justify-center shrink-0 mt-0.5">5</span>
+<p><strong class="font-semibold text-on-surface">Keep conditions hygienic</strong> while the fish are held and packed.</p>
+</div>
+<div class="flex items-start space-x-2">
+<span class="w-5 h-5 rounded-full bg-surface-container text-primary font-bold text-[11px] flex items-center justify-center shrink-0 mt-0.5">6</span>
+<p><strong class="font-semibold text-on-surface">Direct transit:</strong> Rapid dispatch to wholesale terminal markets to preserve freshness premium.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- 7. Primary Call to Action -->
+<section class="space-y-2 pt-1 pb-4">
+<button class="w-full bg-primary hover:bg-primary-container active:scale-95 text-on-primary font-headline-sm text-headline-sm font-bold py-3.5 px-4 rounded-xl shadow-md transition-all duration-150 flex items-center justify-center space-x-2">
+<span>Start Managing Your Fish Farm</span>
+<span class="material-symbols-outlined text-[20px]" data-icon="arrow_forward">arrow_forward</span>
+</button>
+<p class="font-body-sm text-body-sm text-center text-on-surface-variant">
+          Monitor every stage. Improve productivity. Make informed decisions.
+        </p>
+<div class="flex items-center justify-center space-x-1.5 text-center text-[10px] font-label-sm text-outline">
+<span class="material-symbols-outlined text-[13px] text-secondary" data-icon="verified">verified</span>
+<span>A guide on this screen. It is not connected to a live record book.</span>
+</div>
+</section>
+</main>
+<!-- Bottom Navigation Bar (Shared Components execution: 4 tabs with 'Harvest & Records' active) -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-gutter h-16 pb-safe bg-surface-container-lowest border-t border-outline-variant/40 shadow-sm">
+<!-- Tab 1: Home (Inactive) -->
+<a class="flex flex-col items-center justify-center text-on-surface-variant hover:bg-surface-container transition-colors duration-150 active:scale-95 px-2 py-1" href="home.html">
+<span class="material-symbols-outlined text-[22px]" data-icon="home">home</span>
+<span class="text-label-sm font-label-sm mt-0.5">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant hover:bg-surface-container transition-colors duration-150 active:scale-95 px-2 py-1" href="species-nursery.html">
+<span class="material-symbols-outlined text-[22px]" data-icon="phishing">phishing</span>
+<span class="text-label-sm font-label-sm mt-0.5">Fish &amp; Nursery</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant hover:bg-surface-container transition-colors duration-150 active:scale-95 px-2 py-1" href="pond-management.html">
+<span class="material-symbols-outlined text-[22px]" data-icon="water">water</span>
+<span class="text-label-sm font-label-sm mt-0.5">Pond Mgmt</span>
+</a>
+<a class="flex flex-col items-center justify-center bg-surface-container-low text-primary rounded-xl px-2 py-1" href="harvest.html">
+<span class="material-symbols-outlined text-[22px] fill" data-icon="query_stats">query_stats</span>
+<span class="text-label-sm font-label-sm font-bold mt-0.5">Harvest &amp; Records</span>
+</a>
+</nav>
+</div>
+</body></html>

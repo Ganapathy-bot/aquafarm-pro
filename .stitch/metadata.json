@@ -1,0 +1,43 @@
+{
+  "name": "projects/16064670208389050663",
+  "projectId": "16064670208389050663",
+  "title": "AquaFarm Pro",
+  "visibility": "PRIVATE",
+  "projectType": "PROJECT_DESIGN",
+  "origin": "MCP",
+  "deviceType": "MOBILE",
+  "designTheme": {
+    "name": "Limnology Precision",
+    "asset": "assets/ded8ec8380564466a6e929f9821fce3a"
+  },
+  "screens": {
+    "home": {
+      "id": "8e268e2072cb4309900cd9f7f999b987",
+      "sourceScreen": "projects/16064670208389050663/screens/8e268e2072cb4309900cd9f7f999b987",
+      "title": "AquaFarm Pro - Home Dashboard",
+      "width": 780,
+      "height": 3978
+    },
+    "species-nursery": {
+      "id": "8b4c37a0de0146a6b2561285f3dbf727",
+      "sourceScreen": "projects/16064670208389050663/screens/8b4c37a0de0146a6b2561285f3dbf727",
+      "title": "AquaFarm Pro - Species & Nursery Management",
+      "width": 780,
+      "height": 5136
+    },
+    "pond-management": {
+      "id": "e4b8e9a2095a4cc4844d828bada6457b",
+      "sourceScreen": "projects/16064670208389050663/screens/e4b8e9a2095a4cc4844d828bada6457b",
+      "title": "AquaFarm Pro - Scientific Pond Management",
+      "width": 780,
+      "height": 5728
+    },
+    "harvest": {
+      "id": "de6454f024034fa6a3479c8afad3f765",
+      "sourceScreen": "projects/16064670208389050663/screens/de6454f024034fa6a3479c8afad3f765",
+      "title": "AquaFarm Pro - Healthy Fish. Profitable Harvest.",
+      "width": 780,
+      "height": 6394
+    }
+  }
+}

@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>AquaFarm Pro - Freshwater Carp Farming Advisor</title>
+<!-- Google Fonts: Manrope & Inter -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols Outlined -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS with Plugins -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "surface-tint": "#006b5f",
+            "primary-container": "#008376",
+            "outline": "#6d7a77",
+            "surface": "#f7f9ff",
+            "on-secondary-fixed-variant": "#005321",
+            "on-secondary-container": "#1f7337",
+            "surface-variant": "#cce5ff",
+            "tertiary": "#96432a",
+            "inverse-on-surface": "#e7f2ff",
+            "on-surface": "#001e31",
+            "on-primary-fixed": "#00201c",
+            "surface-dim": "#bbdeff",
+            "secondary-fixed": "#a1f6ab",
+            "surface-container-highest": "#cce5ff",
+            "on-error-container": "#93000a",
+            "error": "#ba1a1a",
+            "outline-variant": "#bdc9c5",
+            "on-background": "#001e31",
+            "secondary": "#166d32",
+            "on-error": "#ffffff",
+            "surface-container-high": "#d7eaff",
+            "surface-container-lowest": "#ffffff",
+            "tertiary-fixed-dim": "#ffb5a0",
+            "background": "#f7f9ff",
+            "on-tertiary-fixed-variant": "#7b2e17",
+            "primary-fixed": "#8ff4e3",
+            "surface-container-low": "#ecf4ff",
+            "surface-bright": "#f7f9ff",
+            "on-primary-container": "#f4fffb",
+            "inverse-surface": "#003351",
+            "on-secondary": "#ffffff",
+            "on-surface-variant": "#3d4946",
+            "error-container": "#ffdad6",
+            "on-secondary-fixed": "#002109",
+            "on-tertiary-container": "#fffbff",
+            "primary-fixed-dim": "#72d8c8",
+            "on-primary-fixed-variant": "#005047",
+            "tertiary-fixed": "#ffdbd1",
+            "secondary-fixed-dim": "#86d991",
+            "on-primary": "#ffffff",
+            "inverse-primary": "#72d8c8",
+            "surface-container": "#e2efff",
+            "tertiary-container": "#b55a40",
+            "secondary-container": "#a1f6ab",
+            "on-tertiary-fixed": "#3b0900",
+            "on-tertiary": "#ffffff",
+            "primary": "#00685d"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "2xl": "1rem",
+            "3xl": "1.5rem",
+            "full": "9999px"
+          },
+          "spacing": {
+            "space-lg": "1rem",
+            "space-xs": "0.25rem",
+            "margin": "1rem",
+            "gutter": "0.75rem",
+            "space-md": "0.75rem",
+            "space-sm": "0.5rem",
+            "space-xl": "1.5rem"
+          },
+          "fontFamily": {
+            "body-sm": ["Manrope", "sans-serif"],
+            "label-md": ["Inter", "sans-serif"],
+            "body-lg": ["Manrope", "sans-serif"],
+            "body-md": ["Manrope", "sans-serif"],
+            "headline-sm": ["Manrope", "sans-serif"],
+            "headline-md": ["Manrope", "sans-serif"],
+            "headline-lg-mobile": ["Manrope", "sans-serif"],
+            "headline-lg": ["Manrope", "sans-serif"],
+            "label-sm": ["Inter", "sans-serif"],
+            "stat-display": ["Manrope", "sans-serif"],
+            "label-lg": ["Inter", "sans-serif"]
+          },
+          "fontSize": {
+            "body-sm": ["11px", { "lineHeight": "16px", "letterSpacing": "0.01em", "fontWeight": "400" }],
+            "label-md": ["11px", { "lineHeight": "14px", "letterSpacing": "0.03em", "fontWeight": "500" }],
+            "body-lg": ["15px", { "lineHeight": "22px", "letterSpacing": "0em", "fontWeight": "400" }],
+            "body-md": ["13px", { "lineHeight": "18px", "letterSpacing": "0.01em", "fontWeight": "400" }],
+            "headline-sm": ["16px", { "lineHeight": "22px", "letterSpacing": "0em", "fontWeight": "600" }],
+            "headline-md": ["20px", { "lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+            "headline-lg-mobile": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+            "headline-lg": ["30px", { "lineHeight": "38px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+            "label-sm": ["10px", { "lineHeight": "12px", "letterSpacing": "0.04em", "fontWeight": "600" }],
+            "stat-display": ["22px", { "lineHeight": "26px", "letterSpacing": "-0.02em", "fontWeight": "800" }],
+            "label-lg": ["13px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "600" }]
+          }
+        }
+      }
+    }
+  </script>
+<style>
+    body {
+      background-color: #E7F3F8;
+      color: #001e31;
+      font-family: 'Manrope', sans-serif;
+      -webkit-tap-highlight-color: transparent;
+    }
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      display: inline-block;
+      vertical-align: middle;
+      line-height: 1;
+    }
+    .elevation-card {
+      box-shadow: 0 4px 14px -2px rgba(11, 61, 92, 0.05), 0 1px 3px 0 rgba(11, 61, 92, 0.03);
+    }
+    .elevation-nav {
+      box-shadow: 0 -4px 16px 0 rgba(11, 61, 92, 0.06);
+    }
+    .hide-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+    .hide-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+  </style>
+</head>
+<body class="bg-surface text-on-surface antialiased flex justify-center min-h-screen">
+<!-- Mobile Viewport Wrapper (390 x 844 target) -->
+<div class="w-full max-w-[420px] bg-surface min-h-screen relative flex flex-col pb-24 shadow-2xl overflow-x-hidden">
+<!-- 1. Android System Status Bar (24px height reservation) -->
+<header class="w-full px-margin pt-2.5 pb-1 flex justify-between items-center text-on-surface z-40 select-none">
+<div class="flex items-center space-x-1.5 text-on-surface">
+<span class="material-symbols-outlined text-[16px]">signal_cellular_alt</span>
+<span class="material-symbols-outlined text-[16px]">wifi</span>
+<span class="material-symbols-outlined text-[18px]">battery_full</span>
+</div>
+</header>
+<!-- Top App Bar (Shared Component: TopAppBar with Style Guidance rules) -->
+<nav class="flex flex-col w-full px-margin pt-2 pb-space-sm bg-surface">
+<div class="flex items-center justify-between">
+<!-- Brand Cluster -->
+<div class="flex items-center space-x-2.5">
+<div class="w-9 h-9 rounded-xl overflow-hidden bg-surface-container-lowest p-1 shadow-sm border border-outline-variant/30 flex items-center justify-center">
+<img alt="AquaFarm Pro Logo" class="w-full h-full object-contain" src="https://lh3.googleusercontent.com/aida/ALJJyrAYUZ6n9ny1OXx2XZyaHVDl8FL1MAnIxI4wUBpBknfhM6KkcPRvYJttFWMpuwdvh5kS-vABlQBPOqZsLY_dOlpuweQhhoh0qmxZ9lMJvptssKwT-PyR1uY5jB95sgAKV108ftm4SznGN9ZXu5iW8sjX2-PdRgazVTNacthQfzbqmzen4eEWGp3yORiTe33mhq_DH0LhFByc2nwnzkvQSHZvh7I1O2vW8c9lvOrf8LnclH6CfqWabrQ4Coc"/>
+</div>
+<div class="flex flex-col">
+<span class="text-headline-md font-headline-md font-bold text-on-surface leading-none tracking-tight">AquaFarm Pro</span>
+<span class="text-label-sm font-label-sm text-outline tracking-wider font-semibold">CARP AQUACULTURE ADVISOR</span>
+</div>
+</div>
+<!-- Trailing Actions: Language switch + Notifications -->
+<div class="flex items-center space-x-2">
+<!-- Notification Button -->
+<button aria-label="Notifications" class="relative p-2 rounded-full bg-surface-container-lowest border border-outline-variant/30 text-on-surface hover:bg-surface-container active:scale-95 transition-all" type="button">
+<span class="material-symbols-outlined text-[20px]">notifications</span>
+<span class="absolute top-1.5 right-1.5 w-2 h-2 rounded-full bg-primary ring-2 ring-surface-container-lowest"></span>
+</button>
+</div>
+</div>
+<!-- Tagline Subtitle -->
+<div class="mt-2.5 flex items-center">
+<span class="inline-flex items-center px-2.5 py-1 rounded-md bg-surface-container text-on-surface-variant font-body-sm text-body-sm italic border border-outline-variant/20">
+<span class="material-symbols-outlined text-[14px] mr-1 text-primary" style="font-variation-settings: 'FILL' 1;">water_drop</span>
+          Smart Knowledge. Healthy Fish. Better Harvests.
+        </span>
+</div>
+</nav>
+<!-- Main Content Canvas -->
+<main class="flex-1 px-margin space-y-space-xl mt-1">
+<!-- 2. Hero Section -->
+<section class="relative rounded-2xl overflow-hidden elevation-card border border-outline-variant/40 bg-surface-container-lowest">
+<div class="relative h-48 w-full">
+<img alt="Pond Hero" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCB7csbcrGw7um8Bu3dH3Ek5X1fQysc9hu0z554802OLOGZMrtCaWpo1biHBJrHKzZH7VJlpgpjKjCKfGv885kYmhP91P9cTAcoFAUUZfjL2XnCxhavqBL_ID3aoFcQKr8ujwN2639vp3E5pMFJjNESPWLomAypt4jk2poWHrSu0t1DoM8ahmoS18-TU1zgZ-kkuMHVhc_99sNynoneZFUl9k6W7rTT1ScqQy800P_cRT65P1N4HgFuY3_jX7SgrRsawR4viIQafnQo"/>
+<div class="absolute inset-0 bg-gradient-to-t from-on-surface/90 via-on-surface/40 to-transparent"></div>
+<!-- Farm Status Badge Floating -->
+<div class="absolute top-3 right-3 bg-surface-container-lowest/90 backdrop-blur-sm px-2.5 py-1 rounded-full flex items-center space-x-1.5 border border-surface-container-highest">
+<span class="w-2 h-2 rounded-full bg-secondary animate-pulse"></span>
+<span class="text-label-sm font-label-sm text-on-surface font-semibold">Freshwater pond</span>
+</div>
+<!-- Hero Bottom Details -->
+<div class="absolute bottom-3.5 left-3.5 right-3.5 text-on-primary">
+<span class="inline-block text-label-sm font-label-sm uppercase tracking-wider text-primary-fixed font-bold mb-0.5">Commercial Carp Protocol</span>
+<h2 class="text-headline-sm font-headline-sm font-bold text-on-primary drop-shadow-sm">Grow Better. Harvest Smarter.</h2>
+<p class="text-body-sm font-body-sm text-inverse-on-surface/90 line-clamp-1">Your practical guide to scientific fish farming.</p>
+</div>
+</div>
+<div class="p-space-md flex items-center justify-between bg-surface-container-lowest">
+<div class="flex items-center space-x-2 text-on-surface-variant">
+<span class="material-symbols-outlined text-primary text-[20px]">water</span>
+<span class="text-label-md font-label-md">Composite carp culture</span>
+</div>
+<a class="inline-flex items-center space-x-1 bg-primary text-on-primary px-3.5 py-2 rounded-xl text-label-md font-label-md font-bold hover:bg-primary-container active:scale-95 transition-all shadow-sm" href="species-nursery.html">
+<span>Explore Cultivation</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+</section>
+<!-- 3. Farm Overview -->
+<section class="space-y-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center space-x-2">
+<h3 class="text-headline-sm font-headline-sm font-bold text-on-surface">Farm Overview</h3>
+<span class="bg-surface-container text-primary text-label-sm font-label-sm px-2 py-0.5 rounded-full font-bold border border-outline-variant/30">Polyculture Setup</span>
+</div>
+<span class="text-label-sm font-label-sm text-outline">General</span>
+</div>
+<!-- 2 Pond Management Cards (Grid) -->
+<div class="grid grid-cols-2 gap-2.5">
+<!-- Card 1: Nursery Pond -->
+<div class="bg-surface-container-lowest rounded-2xl p-3 border border-outline-variant/40 elevation-card flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-1.5">
+<span class="text-label-sm font-label-sm px-2 py-0.5 rounded-md bg-surface-container-low text-primary font-bold border border-outline-variant/30">Nursery</span>
+<span class="material-symbols-outlined text-[18px] text-primary">child_care</span>
+</div>
+<h4 class="text-body-lg font-body-lg font-bold text-on-surface">Nursery Pond</h4>
+<p class="text-stat-display font-stat-display font-extrabold text-on-surface mt-0.5">Fry stage</p>
+<p class="text-body-sm font-body-sm text-on-surface-variant mt-1 line-clamp-2">Fish seed rearing &amp; fingerling development</p>
+</div>
+
+</div>
+<!-- Card 2: Grow-out Pond -->
+<div class="bg-surface-container-lowest rounded-2xl p-3 border border-outline-variant/40 elevation-card flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-1.5">
+<span class="text-label-sm font-label-sm px-2 py-0.5 rounded-md bg-secondary-container text-on-secondary-container font-bold border border-secondary/20">Grow-out</span>
+<span class="material-symbols-outlined text-[18px] text-secondary">trending_up</span>
+</div>
+<h4 class="text-body-lg font-body-lg font-bold text-on-surface">Grow-out Pond</h4>
+<p class="text-stat-display font-stat-display font-extrabold text-on-surface mt-0.5">Market size</p>
+<p class="text-body-sm font-body-sm text-on-surface-variant mt-1 line-clamp-2">Fish growth &amp; market-oriented production</p>
+</div>
+
+</div>
+</div>
+<!-- Total Area Diagram Component -->
+<div class="bg-surface-container-lowest rounded-2xl p-3.5 border border-outline-variant/40 elevation-card">
+<div class="flex items-center justify-between mb-2.5">
+<div class="flex items-center space-x-1.5">
+<span class="material-symbols-outlined text-primary text-[20px]">layers</span>
+<span class="text-body-md font-body-md font-bold text-on-surface">A nursery pond and a grow-out pond</span>
+</div>
+<span class="text-label-sm font-label-sm text-secondary font-bold bg-secondary-container/50 px-2 py-0.5 rounded-full">Two ponds</span>
+</div>
+<!-- Schematic Layout Diagram -->
+<div class="grid grid-cols-2 gap-2 bg-surface-container-low p-2 rounded-xl border border-outline-variant/30">
+<!-- Plot 1 -->
+<div class="bg-surface-container-lowest border-2 border-dashed border-primary/40 rounded-lg p-2 flex flex-col items-center justify-center text-center">
+<span class="material-symbols-outlined text-primary text-[22px]">pool</span>
+<span class="text-label-md font-label-md font-bold text-on-surface mt-0.5">Nursery</span>
+<span class="text-label-sm font-label-sm text-outline">Seed rearing</span>
+</div>
+<!-- Plot 2 -->
+<div class="bg-surface-container-lowest border-2 border-primary rounded-lg p-2 flex flex-col items-center justify-center text-center relative overflow-hidden">
+<div class="absolute top-0 right-0 w-3 h-3 bg-secondary rounded-bl"></div>
+<span class="material-symbols-outlined text-secondary text-[22px]">water</span>
+<span class="text-label-md font-label-md font-bold text-on-surface mt-0.5">Grow-out</span>
+<span class="text-label-sm font-label-sm text-outline">Market fish</span>
+</div>
+</div>
+
+</div>
+</section>
+<!-- 4. Fish Species (Major Indian Carp Polyculture) -->
+<section class="space-y-space-sm">
+<div class="flex items-center justify-between">
+<div>
+<h3 class="text-headline-sm font-headline-sm font-bold text-on-surface">Fish Species</h3>
+<p class="text-body-sm font-body-sm text-on-surface-variant">Ecological Niche Polyculture</p>
+</div>
+<span class="text-label-sm font-label-sm text-primary font-bold">3 Stratum System</span>
+</div>
+<div class="space-y-2.5">
+<!-- Card 1: CATLA (Surface Feeder) -->
+<div class="bg-surface-container-lowest rounded-2xl p-3 border border-outline-variant/40 elevation-card flex space-x-3 items-center">
+<div class="w-20 h-20 rounded-xl overflow-hidden flex-shrink-0 bg-surface-container border border-outline-variant/30">
+<img alt="Catla carp" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAPGeB0oLf8QN9Nn1qRZ6vSv7LFJcmAfxWrFCUTrnDUL5EDo76rc2LgLksdjAWDH-sp_ZSc7vz_7i39HPgjFE8V5LGn5bIGrTcfGIyXiS-Mkn09fbLMsKtM1OPryesMVP2A8QlDPpUrAbXx-eqHxLRh6txDQSEzty-mMc4SxrgcMYpPlhqJtceVJkVY8GwWbHfRZNRtSfdVHNIZ67DwU_hlReF3mm9OpJD86oWGSI7HNY4mj4YuDynUs-HrUsMPQRZEWwqngMKs8vOH"/>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex items-center justify-between">
+<span class="text-label-sm font-label-sm uppercase font-bold text-outline">Major Carp</span>
+<!-- Surface Feeder Badge (Theme/Style Guide compliant) -->
+<span class="inline-flex items-center px-2 py-0.5 rounded-full text-label-sm font-label-sm font-bold bg-[#E0F2FE] text-[#0369A1] border border-[#BAE6FD]">
+                  Surface Feeder
+                </span>
+</div>
+<h4 class="text-body-lg font-body-lg font-bold text-on-surface truncate">CATLA <span class="text-body-sm font-body-sm text-outline font-normal italic">(Catla catla)</span></h4>
+<p class="text-body-sm font-body-sm text-on-surface-variant line-clamp-1 mt-0.5">Broad head, upturned mouth, zooplankton feeder</p>
+
+</div>
+</div>
+<!-- Card 2: ROHU (Middle-Column Feeder) -->
+<div class="bg-surface-container-lowest rounded-2xl p-3 border border-outline-variant/40 elevation-card flex space-x-3 items-center">
+<div class="w-20 h-20 rounded-xl overflow-hidden flex-shrink-0 bg-surface-container border border-outline-variant/30">
+<img alt="Rohu carp" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAEJGxylcJBKtT4f_pgGM97l0ZvEZyPiZojqF3PCDAdce-IfJ4ZM5pbsc6OnPPmwCYbqLg5ag0F15uhFhGVSimiOwvgYtRoq8rkXY5NcnrYiMhkFS5m0Dq2PClZYywm2j2IAQIORWUojZ500BKNCOySf-bO5_HgEh7-Mih_el-G1DYsEGXrvS3EP5h9RPI-efU4UHh2qodOPlDiQyBZk5VS-4XJzbZcIn67bm4AiCcl_FUDK5ZXGLD409_AKpg6eayAa8AXnN2Um7yF"/>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex items-center justify-between">
+<span class="text-label-sm font-label-sm uppercase font-bold text-outline">Major Carp</span>
+<!-- Column Feeder Badge -->
+<span class="inline-flex items-center px-2 py-0.5 rounded-full text-label-sm font-label-sm font-bold bg-[#E8F5E9] text-[#2E7D32] border border-[#C8E6C9]">
+                  Middle-Column Feeder
+                </span>
+</div>
+<h4 class="text-body-lg font-body-lg font-bold text-on-surface truncate">ROHU <span class="text-body-sm font-body-sm text-outline font-normal italic">(Labeo rohita)</span></h4>
+<p class="text-body-sm font-body-sm text-on-surface-variant line-clamp-1 mt-0.5">Streamlined body, column feeder, plant matter and other natural food</p>
+
+</div>
+</div>
+<!-- Card 3: MRIGAL (Bottom Feeder) -->
+<div class="bg-surface-container-lowest rounded-2xl p-3 border border-outline-variant/40 elevation-card flex space-x-3 items-center">
+<div class="w-20 h-20 rounded-xl overflow-hidden flex-shrink-0 bg-surface-container border border-outline-variant/30">
+<img alt="Mrigal carp" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuANVDBiMEzoMg56Xrni-hHiIDiS5WDbUVPiqV1cSQD1mTMKJqlYwFeHXP2f5UjqoDJDVNCKrVNmgwayPShuKJqLUXhSy0HV3B-grXYsq3HGil3OvhLmmpdEoZqHvpUW-PDZw-fJ9ddLMngU6m7YnTJ6jCM-5C7CWH5g8CcCyTn1khYwUJJg9JxduKWO-Bj4z6fFTw92RXNeZb2kdpUhUg0Oj_kXgrhS_20hkTehLY6RWzERwqlMLPolm914IfZPYIEjbkB2j6db-z_m"/>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex items-center justify-between">
+<span class="text-label-sm font-label-sm uppercase font-bold text-outline">Major Carp</span>
+<!-- Bottom Feeder Badge -->
+<span class="inline-flex items-center px-2 py-0.5 rounded-full text-label-sm font-label-sm font-bold bg-[#FEF3C7] text-[#B45309] border border-[#FDE68A]">
+                  Bottom Feeder
+                </span>
+</div>
+<h4 class="text-body-lg font-body-lg font-bold text-on-surface truncate">MRIGAL <span class="text-body-sm font-body-sm text-outline font-normal italic">(Cirrhinus mrigala)</span></h4>
+<p class="text-body-sm font-body-sm text-on-surface-variant line-clamp-1 mt-0.5">Sub-terminal mouth, detritivore &amp; benthic grazer</p>
+
+</div>
+</div>
+</div>
+</section>
+<!-- 5. Learning Modules & Advisory -->
+<section class="space-y-space-sm">
+<div class="flex items-center justify-between">
+<h3 class="text-headline-sm font-headline-sm font-bold text-on-surface">Practical Advisory &amp; Learning</h3>
+<span class="material-symbols-outlined text-outline text-[20px]">school</span>
+</div>
+<div class="grid grid-cols-1 gap-2.5">
+<!-- Module 1: Seed & Nursery -->
+<a class="bg-surface-container-lowest rounded-2xl p-3.5 border border-outline-variant/40 elevation-card hover:border-primary/50 transition-colors flex items-center justify-between group" href="species-nursery.html">
+<div class="flex items-start space-x-3">
+<div class="w-10 h-10 rounded-xl bg-surface-container flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-on-primary transition-colors flex-shrink-0">
+<span class="material-symbols-outlined text-[22px]">spa</span>
+</div>
+<div>
+<h4 class="text-body-lg font-body-lg font-bold text-on-surface group-hover:text-primary transition-colors">Fish Seed &amp; Nursery Management</h4>
+<p class="text-body-sm font-body-sm text-on-surface-variant mt-0.5">Hatchery fry, nursery preparation &amp; stocking density calculations</p>
+<div class="flex items-center space-x-2 mt-1.5">
+<span class="text-label-sm font-label-sm text-primary font-semibold bg-surface-container-low px-2 py-0.5 rounded">Spawn to Fingerling</span>
+<span class="text-label-sm font-label-sm text-outline">• Seed to fingerling</span>
+</div>
+</div>
+</div>
+<span class="material-symbols-outlined text-outline-variant group-hover:text-primary transition-colors ml-2">chevron_right</span>
+</a>
+<!-- Module 2: Feed & Nutrition -->
+<a class="bg-surface-container-lowest rounded-2xl p-3.5 border border-outline-variant/40 elevation-card hover:border-primary/50 transition-colors flex items-center justify-between group" href="pond-management.html">
+<div class="flex items-start space-x-3">
+<div class="w-10 h-10 rounded-xl bg-surface-container flex items-center justify-center text-secondary group-hover:bg-secondary group-hover:text-on-secondary transition-colors flex-shrink-0">
+<span class="material-symbols-outlined text-[22px]">nutrition</span>
+</div>
+<div>
+<h4 class="text-body-lg font-body-lg font-bold text-on-surface group-hover:text-secondary transition-colors">Feed &amp; Nutrition Management</h4>
+<p class="text-body-sm font-body-sm text-on-surface-variant mt-0.5">Rice bran and groundnut oil cake, 1:1 by weight</p>
+<div class="flex items-center space-x-2 mt-1.5">
+<span class="text-label-sm font-label-sm text-secondary font-semibold bg-secondary-container/40 px-2 py-0.5 rounded">Rice bran + oil cake</span>
+<span class="text-label-sm font-label-sm text-outline">• Rate depends on size</span>
+</div>
+</div>
+</div>
+<span class="material-symbols-outlined text-outline-variant group-hover:text-secondary transition-colors ml-2">chevron_right</span>
+</a>
+<!-- Module 3: Pond & Water Quality -->
+<a class="bg-surface-container-lowest rounded-2xl p-3.5 border border-outline-variant/40 elevation-card hover:border-primary/50 transition-colors flex items-center justify-between group" href="pond-management.html">
+<div class="flex items-start space-x-3">
+<div class="w-10 h-10 rounded-xl bg-surface-container flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-on-primary transition-colors flex-shrink-0">
+<span class="material-symbols-outlined text-[22px]">chips</span>
+</div>
+<div>
+<h4 class="text-body-lg font-body-lg font-bold text-on-surface group-hover:text-primary transition-colors">Pond &amp; Water Quality Management</h4>
+<p class="text-body-sm font-body-sm text-on-surface-variant mt-0.5">Dissolved oxygen about 5 mg/L or higher, pH about 6.5–8.5. These are guidelines.</p>
+<div class="flex items-center space-x-2 mt-1.5">
+<span class="text-label-sm font-label-sm text-primary font-semibold bg-surface-container-low px-2 py-0.5 rounded">Dissolved Oxygen</span>
+<span class="text-label-sm font-label-sm text-outline">• Early morning check</span>
+</div>
+</div>
+</div>
+<span class="material-symbols-outlined text-outline-variant group-hover:text-primary transition-colors ml-2">chevron_right</span>
+</a>
+<!-- Module 4: Fish Health & Harvesting -->
+<a class="bg-surface-container-lowest rounded-2xl p-3.5 border border-outline-variant/40 elevation-card hover:border-primary/50 transition-colors flex items-center justify-between group" href="harvest.html">
+<div class="flex items-start space-x-3">
+<div class="w-10 h-10 rounded-xl bg-surface-container flex items-center justify-center text-tertiary group-hover:bg-tertiary group-hover:text-on-tertiary transition-colors flex-shrink-0">
+<span class="material-symbols-outlined text-[22px]">scale</span>
+</div>
+<div>
+<h4 class="text-body-lg font-body-lg font-bold text-on-surface group-hover:text-tertiary transition-colors">Fish Health &amp; Harvesting</h4>
+<p class="text-body-sm font-body-sm text-on-surface-variant mt-0.5">Growth sampling, disease prevention, prophylactic baths &amp; netting records</p>
+<div class="flex items-center space-x-2 mt-1.5">
+<span class="text-label-sm font-label-sm text-tertiary font-semibold bg-tertiary-fixed/40 px-2 py-0.5 rounded">Partial Netting</span>
+<span class="text-label-sm font-label-sm text-outline">• Health and records</span>
+</div>
+</div>
+</div>
+<span class="material-symbols-outlined text-outline-variant group-hover:text-tertiary transition-colors ml-2">chevron_right</span>
+</a>
+</div>
+</section>
+<!-- Agronomic Quick Metric Banner -->
+<section class="bg-gradient-to-r from-surface-container-low to-surface-container p-3.5 rounded-2xl border border-outline-variant/30 flex items-center justify-between text-on-surface">
+<div class="flex items-center space-x-2.5">
+<span class="material-symbols-outlined text-primary text-[24px]" style="font-variation-settings: 'FILL' 1;">lightbulb</span>
+<div>
+<h5 class="text-label-md font-label-md font-bold">Daily Carp Tip</h5>
+<p class="text-body-sm font-body-sm text-on-surface-variant">Check pond surface at dawn (5:30 AM) for fish gasping indicating low DO.</p>
+</div>
+</div>
+</section>
+</main>
+<!-- 6. Fixed Android Bottom Navigation Bar (Shared Components JSON execution) -->
+<!-- Destination count: 4, Casing integrity preserved, Shell border ban respected via shadow -->
+<nav class="fixed bottom-0 left-0 right-0 max-w-[420px] mx-auto z-50 flex justify-around items-center px-gutter h-16 pb-safe bg-surface-container-lowest elevation-nav">
+<!-- Destination 1: Home (Active) -->
+<a class="flex flex-col items-center justify-center bg-surface-container-low text-primary rounded-xl px-2 py-1 transition-transform duration-150 active:scale-95" href="home.html">
+<span class="material-symbols-outlined text-[22px]" style="font-variation-settings: 'FILL' 1;">home</span>
+<span class="text-label-sm font-label-sm font-bold mt-0.5">Home</span>
+</a>
+<!-- Destination 2: Fish & Nursery -->
+<a class="flex flex-col items-center justify-center text-on-surface-variant hover:bg-surface-container px-2 py-1 transition-colors duration-150 active:scale-95" href="species-nursery.html">
+<span class="material-symbols-outlined text-[22px]">phishing</span>
+<span class="text-label-sm font-label-sm mt-0.5">Fish &amp; Nursery</span>
+</a>
+<!-- Destination 3: Pond Mgmt -->
+<a class="flex flex-col items-center justify-center text-on-surface-variant hover:bg-surface-container px-2 py-1 transition-colors duration-150 active:scale-95" href="pond-management.html">
+<span class="material-symbols-outlined text-[22px]">water</span>
+<span class="text-label-sm font-label-sm mt-0.5">Pond Mgmt</span>
+</a>
+<!-- Destination 4: Harvest & Records -->
+<a class="flex flex-col items-center justify-center text-on-surface-variant hover:bg-surface-container px-2 py-1 transition-colors duration-150 active:scale-95" href="harvest.html">
+<span class="material-symbols-outlined text-[22px]">query_stats</span>
+<span class="text-label-sm font-label-sm mt-0.5">Harvest &amp; Records</span>
+</a>
+</nav>
+</div>
+</body></html>
